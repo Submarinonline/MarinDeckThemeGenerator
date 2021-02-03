@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarinDeckThemeTool</title>
+
+  <link rel="stylesheet" href="./web/css/normalize.css">
+  <link rel="stylesheet" href="./web/css/histyle.css">
+  <link rel="stylesheet" href="./web/css/histyleUI.css">
+  <link rel="stylesheet" href="./web/css/iota/iota.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .deck {
+      width: 100%;
+      height: 100%;
+    }
+
+    .editor {
+      --template-cols-lg: 500px 1fr;
+      --template-cols-xl: 500px 1fr;
+      --cols-sm: 1;
+      --cols-lg: 2;
+      --cols-xl: 2;
+    }
+
+    .editor-input,
+    .editor-deck {
+      height: 550px;
+      border: #d3d3d3 1px solid;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="title">ThemeKit</div>
+  </header>
+  <div class="ctr">
+    <h2 style="color: red;">注意！このサイトは現在工事中です。</h2>
+    <ul class="nav">
+      <li><a href="#edit-col">カラム</a></li>
+      <li><a href="#edit-mdl">モーダル</a></li>
+      <li><a href="#edit-mdl">DM</a></li>
+    </ul>
+    <div id="editor-col" class="grid editor">
+      <div class="editor-deck">
+        <iframe class="deck" id="deck-col" src="./web/deck/home.html" frameborder="0"></iframe>
+      </div>
+      <div class="editor-input">
+        <h3>テーマ</h3>
+        <div id="change-theme">
+          <input type="radio" checked="checked" name="deck-col-theme" id="deck-col-theme-light" value="0" ><label for="deck-col-theme-light">ライトモード</label>
+          <input type="radio" name="deck-col-theme" id="deck-col-theme-dark" value="1"><label for="deck-col-theme-dark">ダークモード</label>  
+        </div>
+        <h3>文字色</h3>
+        <div id="change-color">
+          <label for="deck-col-header-color">ヘッダー</label>
+          <input type="color" id="deck-col-header-color" placeholder="カラーコードを入力">
+        </div>
+        <h3>背景色</h3>
+        <div id="change-color">
+          <label for="deck-col-header-backcolor">ヘッダー</label>
+          <input type="color" id="deck-col-header-backcolor" placeholder="カラーコードを入力">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="point"></div>
+
+  <script src="./web/js/jquery-3.5.1.min.js"></script>
+  <script src="./web/js/themetool.js"></script>
+</body>
+
+</html>

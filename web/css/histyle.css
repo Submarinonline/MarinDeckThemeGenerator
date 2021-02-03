@@ -1,0 +1,152 @@
+* {
+  scroll-behavior: smooth
+}
+
+body {
+  color: #232350;
+  background-color: #fff;
+  font-size: 15px;
+  font-family: 'Jost', sans-serif;
+  overflow-x: hidden
+}
+
+header {
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: #41adef05;
+  box-shadow: 0 0 20px 0 #a0a6b8;
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px)
+}
+
+header>* {
+  height: 50px;
+  color: #41adef
+}
+
+header+* {
+  margin-top: 74px
+}
+
+blockquote {
+  border: #d3d3d3 1px solid;
+  margin: 0 !important;
+  padding: 14px;
+  border-radius: 15px !important
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px
+}
+
+h2 {
+  width: 100%;
+  background-color: #eaeaee;
+  height: 34px;
+  margin-top: 0 !important;
+  margin-bottom: 35px;
+  text-align: center;
+  line-height: 34px;
+  font-size: 16px
+}
+
+h2[id]::before {
+  display: block;
+  height: 70px;
+  margin-top: -70px;
+  content: ""
+}
+
+h3 {
+  color: #41adef;
+  margin: 15px 0 0 0;
+  font-size: 15px;
+  line-height: 15px
+}
+
+h3[id]::before {
+  display: block;
+  height: 70px;
+  margin-top: -70px;
+  content: ""
+}
+
+p {
+  margin: 7.5px 0
+}
+
+ul.index>ul {
+  margin: 15px 0 1rem 7.5px
+}
+
+ul.index>ul>li {
+  margin-bottom: 8px
+}
+
+a {
+  color: #41adef;
+  text-decoration: none
+}
+
+.title {
+  float: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 50px;
+  width: calc(100% - 100px);
+  filter: drop-shadow(0 0 20px #a0a6b8);
+  text-align: center;
+  white-space: nowrap
+}
+
+.ctr {
+  width: 87%;
+  margin-right: auto;
+  margin-left: auto
+}
+
+.point {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  margin: 1rem auto 2rem auto;
+  background-color: #aaa
+}
+
+.inline-icon {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: middle
+}
+
+.signature {
+  font-size: 14px;
+  text-align: center
+}
+
+pre {
+  width: 100%;
+  white-space: pre
+}
+
+code {
+  font-size: 14px;
+  white-space: nowrap;
+  background-color: #eaeaee;
+  border: #d3d3d3 1px solid;
+  user-select: all
+}
+
+pre>code {
+  display: block;
+  padding: 3.5px 7px;
+  white-space: pre
+}
