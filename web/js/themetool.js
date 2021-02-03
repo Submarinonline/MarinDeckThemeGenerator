@@ -17,4 +17,12 @@ $(function () {
     let val = $(this).val();
     $('#deck-col').contents().find('.column-header').css('background-color', val);
   });
+  $('#deck-col-stream-item-color').change(function () {
+    let val = $(this).val();
+    $('#deck-col').contents().find('.stream-item').css('color', val);
+  });
+  $('#deck-col-stream-item-backcolor').change(function () {
+    let val = $(this).val();
+    $('#deck-col').contents().find('.stream-item').css('background-color', val);
+  });
 });
