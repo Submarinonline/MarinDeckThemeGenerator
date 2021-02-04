@@ -1,28 +1,28 @@
-let deckCss
+let themeCss = {};
 
 $(function () {
-  $('input[name="deck-col-theme"]:radio').change(function () {
+  $('input[name="td-theme"]:radio').change(function () {
     let val = $(this).val();
     if (val == 1) {
-      $('#deck-col').contents().find('html').addClass('dark');
+      $('.td-preview').contents().find('html').addClass('dark');
     } else {
-      $('#deck-col').contents().find('html').removeClass('dark');
+      $('.td-preview').contents().find('html').removeClass('dark');
     }
   });
-  $('#deck-col-header-color').change(function () {
+
+  $('input.td-com-css').change(function () {
+    let tdClass = $(this).data('class');
+    let tdProp = $(this).data('prop');
     let val = $(this).val();
-    $('#deck-col').contents().find('.column-header').css('color', val);
+    $('.td-preview').contents().find(`.${tdClass}`).css(tdProp, val);
+    $(`input[data-class=${tdClass}][data-prop=${tdProp}]`).val(val);
   });
-  $('#deck-col-header-backcolor').change(function () {
+
+  $('input.td-col-css').change(function () {
+    let tdClass = $(this).data('class');
+    let tdProp = $(this).data('prop');
     let val = $(this).val();
-    $('#deck-col').contents().find('.column-header').css('background-color', val);
-  });
-  $('#deck-col-stream-item-color').change(function () {
-    let val = $(this).val();
-    $('#deck-col').contents().find('.stream-item').css('color', val);
-  });
-  $('#deck-col-stream-item-backcolor').change(function () {
-    let val = $(this).val();
-    $('#deck-col').contents().find('.stream-item').css('background-color', val);
+    $('.td-preview').contents().find(`.${tdClass}`).css(tdProp, val);
+    $(`input[data-class=${tdClass}][data-prop=${tdProp}]`).val(val);
   });
 });

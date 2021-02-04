@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./web/css/iota/iota.css">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    .deck {
+    .td-preview {
       width: 100%;
       height: 100%;
     }
@@ -30,6 +30,10 @@
       height: 550px;
       border: #d3d3d3 1px solid;
     }
+
+    h2 {
+      margin: 10px 0;
+    }
   </style>
 </head>
 
@@ -44,29 +48,79 @@
       <li><a href="#edit-mdl">モーダル</a></li>
       <li><a href="#edit-mdl">DM</a></li>
     </ul>
-    <div id="editor-col" class="grid editor">
-      <div class="editor-deck">
-        <iframe class="deck" id="deck-col" src="./web/deck/home.html" frameborder="0"></iframe>
-      </div>
-      <div class="editor-input">
+
+    <h2>全体設定(仮置き)</h2>
+    <div class="editor-input" style="height: auto;">
+      <div>
         <h3>テーマ</h3>
         <div id="change-theme">
-          <input type="radio" checked="checked" name="deck-col-theme" id="deck-col-theme-light" value="0" ><label for="deck-col-theme-light">ライトモード</label>
-          <input type="radio" name="deck-col-theme" id="deck-col-theme-dark" value="1"><label for="deck-col-theme-dark">ダークモード</label>  
+          <input type="radio" checked="checked" name="td-theme" id="td-theme-light" value="0"><label
+            for="td-theme-light">ライトモード</label>
+          <input type="radio" name="td-theme" id="td-theme-dark" value="1"><label
+            for="td-theme-dark">ダークモード</label>
         </div>
-        <h3>文字色</h3>
-        <div id="change-color">
-          <label for="deck-col-header-color">ヘッダー</label>
-          <input type="color" id="deck-col-header-color" placeholder="カラーコードを入力">
-          <label for="deck-col-stream-item-color">ツイート</label>
-          <input type="color" id="deck-col-stream-item-color" placeholder="カラーコードを入力">
+      </div>
+    </div>
+    <h2>カラム</h2>
+    <div id="editor-col" class="grid editor">
+      <div class="editor-deck">
+        <iframe class="td-preview" src="./web/deck/home.html" frameborder="0"></iframe>
+      </div>
+      <div class="editor-input">
+        <h3>本体</h3>
+        <label>
+          背景
+          <input type="text" class="td-col-css" data-class="column-panel" data-prop="background-color"
+            placeholder="カラーコードを入力">
+          <input type="color" class="td-col-css" data-class="column-panel" data-prop="background-color">
+        </label>
+        <h3>ヘッダー</h3>
+        <div>
+          <label>
+            文字
+            <input type="text" class="td-col-css" data-class="column-header" data-prop="color" placeholder="カラーコードを入力">
+            <input type="color" class="td-col-css" data-class="column-header" data-prop="color">
+          </label><br>
+          <label>
+            背景
+            <input type="text" class="td-col-css" data-class="column-header" data-prop="background-color"
+              placeholder="カラーコードを入力">
+            <input type="color" class="td-col-css" data-class="column-header" data-prop="background-color">
+          </label><br>
+          <label>
+            角の丸み
+            <input type="text" class="td-col-css" data-class="column-header" data-prop="border-radius"
+              placeholder="数値と単位を入力">
+          </label><br>
+          <label>
+            設定アイコン
+            <input type="text" class="td-col-css" data-class="column-header-link" data-prop="color" placeholder="カラーコードを入力">
+            <input type="color" class="td-col-css" data-class="column-header-link" data-prop="color">
+          </label>
         </div>
-        <h3>背景色</h3>
-        <div id="change-color">
-          <label for="deck-col-header-backcolor">ヘッダー</label>
-          <input type="color" id="deck-col-header-backcolor" placeholder="カラーコードを入力">
-          <label for="deck-col-stream-item-color">ツイート</label>
-          <input type="color" id="deck-col-stream-item-backcolor" placeholder="カラーコードを入力">
+        <h3>ツイート</h3>
+        <div>
+          <label>
+            文字
+            <input type="text" class="td-col-css" data-class="stream-item" data-prop="color" placeholder="カラーコードを入力">
+            <input type="color" class="td-col-css" data-class="stream-item" data-prop="color">
+          </label><br>
+          <label>
+            背景
+            <input type="text" class="td-col-css" data-class="stream-item" data-prop="background-color"
+              placeholder="カラーコードを入力">
+            <input type="color" class="td-col-css" data-class="stream-item" data-prop="background-color">
+          </label><br>
+          <label>
+            角の丸み
+            <input type="text" class="td-col-css" data-class="stream-item" data-prop="border-radius"
+              placeholder="数値と単位を入力">
+          </label><br>
+          <label>
+            アクション(通常時)
+            <input type="text" class="td-col-css" data-class="tweet-action" data-prop="color" placeholder="カラーコードを入力">
+            <input type="color" class="td-col-css" data-class="tweet-action" data-prop="color">
+          </label>
         </div>
       </div>
     </div>
