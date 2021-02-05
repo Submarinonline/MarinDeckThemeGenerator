@@ -21,14 +21,17 @@ $(function () {
         tdCss[tdSel].splice(tdSel, 1);
       }
     })
-    tdCss[tdSel].push(`${tdProp}:${val}!important;`);
+    if (val) tdCss[tdSel].push(`${tdProp}:${val}!important;`);
     let tdCssText = "";
     Object.keys(tdCss).forEach((key) => {
-      tdCssText = tdCssText + `${key}{`
+      if (tdCss[key].length === 0) delete tdCss[key];
+      else {
+        tdCssText = tdCssText + `${key}{`
       tdCss[key].forEach((e) => {
         tdCssText = tdCssText + e;
       })
       tdCssText = tdCssText + "}\n"
+      }
     })
     $('.td-css-text').val(tdCssText);
   });
