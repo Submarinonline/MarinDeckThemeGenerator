@@ -35,16 +35,22 @@
       margin: 10px 0;
     }
 
-    .td-css-text {
+    .td-css-text,
+    .td-css-text-min {
       width: 100%;
       height: 10rem;
+    }
+
+    .td-css-obj,
+    .td-css-import {
+      width: 100%;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="title">ThemeGenerator</div>
+    <div class="title">ThemeGenerator(v<span id="mdtg-ver"></span>)</div>
   </header>
   <div class="ctr">
     <h2 style="color: red;">注意！このサイトは現在工事中です。</h2>
@@ -57,13 +63,35 @@
     <h2>全体設定(仮置き)</h2>
     <div class="editor-input" style="height: auto;">
       <div>
+        <h3>インポート</h3>
+        <input type="text" class="td-css-import">
         <h3>テーマ</h3>
         <div id="change-theme">
           <input type="radio" checked="checked" name="td-theme" id="td-theme-light" value="0"><label
             for="td-theme-light">ライトモード</label>
-          <input type="radio" name="td-theme" id="td-theme-dark" value="1"><label
-            for="td-theme-dark">ダークモード</label>
+          <input type="radio" name="td-theme" id="td-theme-dark" value="1"><label for="td-theme-dark">ダークモード</label>
         </div>
+        <h3>共通</h3>
+        <label>
+          文字
+          <input type="text" class="td-css" data-sel="html" data-prop="color" placeholder="カラーコードを入力">
+          <input type="color" class="td-css" data-sel="html" data-prop="color">
+        </label>
+        <label>
+          文字(ユーザーネームなどの薄い文字)
+          <input type="text" class="td-css" data-sel=".txt-mute" data-prop="color" placeholder="カラーコードを入力">
+          <input type="color" class="td-css" data-sel=".txt-mute" data-prop="color">
+        </label><br>
+        <label>
+          文字(リンク)
+          <input type="text" class="td-css" data-sel="a" data-prop="color" placeholder="カラーコードを入力">
+          <input type="color" class="td-css" data-sel="a" data-prop="color">
+        </label>
+        <label>
+          背景
+          <input type="text" class="td-css" data-sel="body" data-prop="background-color" placeholder="カラーコードを入力">
+          <input type="color" class="td-css" data-sel="body" data-prop="background-color">
+        </label>
       </div>
     </div>
     <h2>カラム</h2>
@@ -71,7 +99,7 @@
       <div class="editor-deck">
         <iframe class="td-preview" src="./web/deck/home.html" frameborder="0"></iframe>
       </div>
-      <div class="editor-input">
+      <div class="editor-input" style="overflow-x: hidden; overflow-y: scroll;">
         <h3>本体</h3>
         <label>
           背景
@@ -118,18 +146,46 @@
           </label><br>
           <label>
             角の丸み
-            <input type="text" class="td-css" data-sel=".stream-item" data-prop="border-radius"
-              placeholder="数値と単位を入力">
-          </label><br>
-          <label>
-            アクション(通常時)
-            <input type="text" class="td-css" data-sel=".tweet-action" data-prop="color" placeholder="カラーコードを入力">
-            <input type="color" class="td-css" data-sel=".tweet-action" data-prop="color">
+            <input type="text" class="td-css" data-sel=".stream-item" data-prop="border-radius" placeholder="数値と単位を入力">
           </label>
         </div>
-        <h3>スタイルシート</h3>
-        <textarea class="td-css-text"></textarea>
+        <h3>ツイートアクション</h3>
+        <div>
+          <label>
+            全体(通常時)
+            <input type="text" class="td-css" data-sel=".tweet-action" data-prop="color" placeholder="カラーコードを入力">
+            <input type="color" class="td-css" data-sel=".tweet-action" data-prop="color">
+          </label><br>
+          <label>
+            リプライ(通常時)
+            <input type="text" class="td-css" data-sel=".tweet-action[rel='reply']" data-prop="color" placeholder="カラーコードを入力">
+            <input type="color" class="td-css" data-sel=".tweet-action[rel='reply']" data-prop="color">
+          </label><br>
+          <label>
+            リツイート(通常時)
+            <input type="text" class="td-css" data-sel=".tweet-action[rel='retweet']" data-prop="color" placeholder="カラーコードを入力">
+            <input type="color" class="td-css" data-sel=".tweet-action[rel='retweet']" data-prop="color">
+          </label><br>
+          <label>
+            いいね(通常時)
+            <input type="text" class="td-css" data-sel=".tweet-action[rel='favorite']" data-prop="color" placeholder="カラーコードを入力">
+            <input type="color" class="td-css" data-sel=".tweet-action[rel='favorite']" data-prop="color">
+          </label><br>
+          <label>
+            メニュー(通常時)
+            <input type="text" class="td-css" data-sel=".tweet-action[rel='actionsMenu']" data-prop="color" placeholder="カラーコードを入力">
+            <input type="color" class="td-css" data-sel=".tweet-action[rel='actionsMenu']" data-prop="color">
+          </label><br>
+        </div>
       </div>
+    </div>
+    <div class="editor-input" style="height: auto;">
+      <h3>インポート可能形式</h3>
+      <input type="text" class="td-css-obj" onfocus="this.select();">
+      <h3>CSS</h3>
+      <textarea class="td-css-text"></textarea>
+      <h3>CSS(改行なし)</h3>
+      <textarea class="td-css-text-min"></textarea>
     </div>
   </div>
   <div class="point"></div>
