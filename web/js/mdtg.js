@@ -17,11 +17,13 @@ $(function () {
     $(`input[data-sel="${tdSel}"][data-prop="${tdProp}"]`).val(val);
     if (tdSel in tdCss === false) tdCss[tdSel] = [];
     tdCss[tdSel].forEach((e) => {
-      if (e.match(new RegExp(tdProp))) {
-        tdCss[tdSel].splice(tdSel, 1);
+      if (e.startsWith(`${tdProp}:`)) {
+        let index = tdCss[tdSel].indexOf(e)
+        tdCss[tdSel].splice(index,1)
       }
     })
     if (val) tdCss[tdSel].push(`${tdProp}:${val}!important;`);
+    tdCss[tdSel].sort()
     let tdCssText = "";
     Object.keys(tdCss).forEach((key) => {
       if (tdCss[key].length === 0) delete tdCss[key];
