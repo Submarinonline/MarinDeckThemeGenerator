@@ -4,7 +4,7 @@
 
 body {
   color: #232350;
-  background-color: #fff;
+  background-color: #fff !important;
   font-size: 15px;
   font-family: 'Jost', sans-serif;
   overflow-x: hidden
@@ -47,8 +47,8 @@ h2 {
   width: 100%;
   background-color: #eaeaee;
   height: 34px;
-  margin-top: 0 !important;
-  margin-bottom: 35px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   line-height: 34px;
   font-size: 16px
@@ -90,6 +90,36 @@ ul.index>ul>li {
 a {
   color: #41adef;
   text-decoration: none
+}
+
+label {
+  vertical-align: middle;
+}
+
+input {
+  display: inline-block;
+  vertical-align: middle;
+  outline: none;
+}
+
+input[type="text"],
+textarea {
+  margin: 5px;
+  outline: none;
+  border: #d3d3d3 1px solid;
+  background-color: #eaeaee;
+}
+
+input[type="color"] {
+  border: #d3d3d3 1px solid;
+  background-color: #eaeaee;
+}
+
+input[type="button"] {
+  border: #41adef 1px solid;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #41adef;
 }
 
 .title {
