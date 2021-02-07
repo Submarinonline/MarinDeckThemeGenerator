@@ -1,11 +1,11 @@
-let mdtgver = "0.17α";
+let mdtgver = "0.17.1";
 
 let tdCss = {};
 let tdCssText = "";
 let tdCssTextMin = "";
 let addHtmlDark = false;
 
-function cssOutput () {
+function cssOutput() {
   tdCssText = "";
   Object.keys(tdCss).forEach((key) => {
     if (tdCss[key].length === 0) delete tdCss[key];
@@ -15,12 +15,19 @@ function cssOutput () {
         tdCssText = tdCssText + e;
       })
       tdCssText = tdCssText + "}\n"
-      if(addHtmlDark == true) {
-        tdCssText = tdCssText + `html.dark ${key}{`
-      tdCss[key].forEach((e) => {
-        tdCssText = tdCssText + e;
-      })
-      tdCssText = tdCssText + "}\n"
+      if (addHtmlDark == true) {
+        key = key.split(",");
+        let i = 0;
+        key.forEach((e)=>{
+          i++
+          tdCssText = tdCssText + `html.dark ${e}`
+          if(i != key.length) tdCssText = tdCssText + ",\n"
+        })
+        tdCssText = tdCssText + "{"
+        tdCss[key].forEach((e) => {
+          tdCssText = tdCssText + e;
+        })
+        tdCssText = tdCssText + "}\n"
       }
     }
   })
