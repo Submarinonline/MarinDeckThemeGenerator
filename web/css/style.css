@@ -1,3 +1,112 @@
-h3 {
-  margin-top: 0;
+ul.nav {
+  list-style:none;
+  display: flex;
+}
+
+ul.nav li {
+  text-align: center;
+  width: 100%;
+}
+
+.td-preview {
+  width: 100%;
+  height: 100%;
+}
+
+.editor {
+  --template-cols-lg: 400px 1fr;
+  --template-cols-xl: 400px 1fr;
+  --cols-sm: 1;
+  --cols-lg: 2;
+  --cols-xl: 2;
+}
+
+.editor-input-grid {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+
+.half {
+  --cols-sm: 1;
+  --cols-lg: 2;
+  --cols-xl: 2;
+}
+
+.editor-input,
+.editor-td {
+  height: 550px;
+  border: #d3d3d3 1px solid;
+}
+
+.editor-input {
+  box-sizing: border-box;
+  padding: .5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+.td-css-text,
+.td-css-text-min {
+  width: calc(100% - 15px);
+  height: 10rem;
+  resize: vertical;
+}
+
+.td-css-obj,
+.td-css-import {
+  width: calc(100% - 15px);
+}
+
+input[type="text"].td-css {
+  width: calc(100% - 50px);
+}
+
+input[type="color"].td-css {
+  width: 40px;
+}
+
+.styleform {
+  margin: 5px;
+  width: 65%;
+  height: 28px;
+  display: inline-block;
+  border: #d3d3d3 1px solid;
+  background-color: #eaeaee;
+  vertical-align: middle;
+}
+
+.styleform input[type="text"] {
+  vertical-align: middle;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  border: none;
+}
+
+.styleform input[type="color"] {
+  vertical-align: middle;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  border: none;
+}
+
+.styletext {
+  display: inline-block;
+  width: 30%;
+  align-self: center;
+  vertical-align: middle;
+}
+
+.stylecaution {
+  margin-left: 1rem;
+}
+
+.displaynone {
+  display: none;
 }

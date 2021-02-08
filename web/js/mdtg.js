@@ -1,4 +1,4 @@
-let mdtgver = "0.17.1";
+let mdtgver = "0.17.9";
 
 let tdCss = {};
 let tdCssText = "";
@@ -106,5 +106,10 @@ $(function () {
     } catch (error) {
       alert("インポートに失敗しました");
     }
-  })
+  });
+
+  $('#open-menu').click(function () {
+    $('#button-menu').toggleClass('anim');
+    $('header').toggleClass('menuopen');
+  });
 });

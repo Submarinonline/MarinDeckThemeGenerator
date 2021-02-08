@@ -7,12 +7,15 @@ body {
   background-color: #fff !important;
   font-size: 15px;
   font-family: 'Jost', sans-serif;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 header {
   width: 100vw;
   height: 50px;
+  height: 50px;
+  transition: height .3s ease-in-out;
+  overflow-y: hidden;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -20,6 +23,9 @@ header {
   box-shadow: 0 0 20px 0 #a0a6b8;
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px)
+}
+header.menuopen {
+  height: 100vh;
 }
 
 header>* {
@@ -125,14 +131,57 @@ input[type="button"] {
 .title {
   float: left;
   margin-left: 50px;
-  margin-right: 50px;
   font-size: 25px;
   font-weight: 600;
   line-height: 50px;
   width: calc(100% - 100px);
   filter: drop-shadow(0 0 20px #a0a6b8);
   text-align: center;
-  white-space: nowrap
+  white-space: nowrap;
+  user-select: none;
+}
+
+.headericon {
+  width: 50px;
+  font-size: 18px;
+  text-align: center;
+  float: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headericon>.material-icons {
+  line-height: 50px;
+  margin: 0;
+  padding: 0
+}
+
+.headericon + .title {
+  margin-left: 0;
+}
+
+.headericon .ani {
+  background-color: #41adef !important;
+}
+
+.headermenu {
+  float: left;
+  width: 100%;
+}
+
+.menuitem,
+.menutitle {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.menutitle {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .ctr {
@@ -179,4 +228,71 @@ pre>code {
   display: block;
   padding: 3.5px 7px;
   white-space: pre
+}
+
+.material-icons {
+  user-select: none;
+}
+
+
+.animated-icon {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: inline-block;
+}
+
+.animated-icon .ani {
+  top: 18px;
+  left: 10px;
+}
+
+.animated-icon .ani,
+.animated-icon .ani:before,
+.animated-icon .ani:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 18px;
+  background: rgb(33, 33, 33);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.animated-icon .ani:before,
+.animated-icon .ani:after {
+  background: inherit;
+}
+
+.animated-icon.menu-cross .ani:before {
+  top: -5px;
+  right: 0;
+}
+
+.animated-icon.menu-cross .ani:after {
+  top: 5px;
+  right: 0;
+}
+
+.animated-icon.menu-cross.anim .ani {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.animated-icon.menu-cross.anim .ani:before {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.animated-icon.menu-cross.anim .ani:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
