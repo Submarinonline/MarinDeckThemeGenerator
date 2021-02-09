@@ -1,4 +1,4 @@
-let mdtgver = "0.17.9";
+let mdtgver = "0.17.10";
 
 let tdCss = {};
 let tdCssText = "";
