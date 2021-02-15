@@ -51,7 +51,9 @@ h2 {
 }
 
 .td-css-text,
-.td-css-text-min {
+.td-css-text-min,
+.td-js,
+.td-js-min {
   width: calc(100% - 15px);
   height: 10rem;
   resize: vertical;

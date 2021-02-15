@@ -14,7 +14,6 @@ header {
   width: 100vw;
   height: 50px;
   height: 50px;
-  transition: height .3s ease-in-out;
   overflow-y: hidden;
   position: fixed;
   top: 0;
@@ -22,10 +21,13 @@ header {
   background-color: #41adef05;
   box-shadow: 0 0 20px 0 #a0a6b8;
   backdrop-filter: blur(6.5px);
-  -webkit-backdrop-filter: blur(6.5px)
+  -webkit-backdrop-filter: blur(6.5px);
+  transition: .3s ease-in-out;
 }
+
 header.menuopen {
   height: 100vh;
+  background-color: #a0a6b870;
 }
 
 header>* {
@@ -158,7 +160,7 @@ input[type="button"] {
   padding: 0
 }
 
-.headericon + .title {
+.headericon+.title {
   margin-left: 0;
 }
 
@@ -175,13 +177,20 @@ input[type="button"] {
 .menutitle {
   display: block;
   width: 100%;
-  font-size: 20px;
   text-align: center;
+  filter: drop-shadow(0 0 20px #a0a6b8);
 }
 
 .menutitle {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
+  font-size: 20px;
+  color: #232350;
+}
+
+.menuitem {
+  font-size: 17.5px;
+  cursor: pointer;
 }
 
 .ctr {
@@ -228,6 +237,23 @@ pre>code {
   display: block;
   padding: 3.5px 7px;
   white-space: pre
+}
+
+.mdl {
+  width: 100vw;
+  height: 1000vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  backdrop-filter: blur(10px) brightness(1);
+  opacity: 0;
+  touch-action: none;
+  transition: opacity .3s;
+}
+
+.mdl .mdlopen {
+  opacity: 1;
 }
 
 .material-icons {

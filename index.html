@@ -23,8 +23,8 @@
     </div>
     <div class="title">ThemeGenerator (v<span id="mdtg-ver"></span>)</div>
     <div class="headermenu">
-      <b class="menutitle">Menu(今後実装予定)</b>
-      <!--<a class="menuitem" href=""></a>-->
+      <b class="menutitle">Menu</b>
+      <a class="menuitem" id="open-about" onclick="togglemenu()">このWebアプリについて(仮作成)</a>
     </div>
   </header>
   <div class="ctr">
@@ -240,6 +240,32 @@
     <h2>出力</h2>
     <div class="editor-input" style="height: auto;">
       <h3>設定</h3>
+      <div class="grid editor-input-grid">
+        <div>
+          <span class="styletext">テーマID</span>
+          <div class="styleform">
+            <input type="text" class="md-theme-info" data-prop="suffix" placeholder="半角英数字を推奨">
+          </div>
+        </div>
+        <div>
+          <span class="styletext">テーマ名</span>
+          <div class="styleform">
+            <input type="text" class="md-theme-info" data-prop="name">
+          </div>
+        </div>
+        <div>
+          <span class="styletext">バージョン</span>
+          <div class="styleform">
+            <input type="text" class="md-theme-info" data-prop="version" placeholder="半角英数字を推奨">
+          </div>
+        </div>
+        <div>
+          <span class="styletext">製作者</span>
+          <div class="styleform">
+            <input type="text" class="md-theme-info" data-prop="author">
+          </div>
+        </div>
+      </div>
       <input type="checkbox" id="add-html-dark"><label for="add-html-dark">ダークモードも同配色を保つ</label>
       <h3>インポート可能形式(Json)</h3>
       <input type="text" class="td-css-obj" onfocus="this.select();">
@@ -253,9 +279,25 @@
           <textarea class="td-css-text-min" onfocus="this.select();"></textarea>
         </div>
       </div>
+      <div class="grid half">
+        <div>
+          <h3>JavaScript</h3>
+          <textarea class="td-js" onfocus="this.select();"></textarea>
+        </div>
+        <div>
+          <h3>JavaScript(改行なし・テーマ提出用)</h3>
+          <textarea class="td-js-min" onfocus="this.select();"></textarea>
+        </div>
+      </div>
     </div>
   </div>
   <div class="point"></div>
+
+  <div class="mdl displaynone" id="mdl-about">
+    <div class="mdl-content">
+
+    </div>
+  </div>
 
   <script src="./web/js/jquery-3.5.1.min.js"></script>
   <script src="./web/js/mdtg.js"></script>
