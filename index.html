@@ -29,12 +29,6 @@
   </header>
   <div class="ctr">
     <h2 style="color: red;">注意！このサイトは現在工事中です。</h2>
-    <ul class="nav">
-      <li><a href="#edit-col">カラム</a></li>
-      <li><a href="#edit-mdl">モーダル</a></li>
-      <li><a href="#edit-mdl">DM</a></li>
-    </ul>
-
     <h2>全体設定(仮置き)</h2>
     <div class="editor-input" style="height: auto;">
       <div>
@@ -87,156 +81,215 @@
         </div>
       </div>
     </div>
-    <h2>カラム</h2>
-    <div id="editor-col" class="grid editor">
-      <div class="editor-td">
-        <iframe class="td-preview" src="./web/deck/home.html" frameborder="0"></iframe>
-      </div>
-      <div class="editor-input td-theme-light">
-        <h3>本体</h3>
-        <div class="grid editor-input-grid">
-          <div>
-            <span class="styletext">背景</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".column-panel" data-prop="background-color"
-                placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".column-panel" data-prop="background-color">
-            </div>
-          </div>
-        </div>
-        <h3>ヘッダー</h3>
-        <div class="grid editor-input-grid">
-          <div>
-            <span class="styletext">文字</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".column-header" data-prop="color" placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".column-header" data-prop="color">
-            </div>
-          </div>
-          <div>
-            <span class="styletext">背景</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".column-header" data-prop="background-color"
-                placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".column-header" data-prop="background-color">
-            </div>
-          </div>
-          <div>
-            <span class="styletext">丸み</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".column-header" data-prop="border-radius"
-                placeholder="数値と単位を入力">
-            </div>
-          </div>
-          <div>
-            <span class="styletext">設定アイコン</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".column-header-link" data-prop="color"
-                placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".column-header-link" data-prop="color">
-            </div>
-          </div>
-        </div>
-        <h3>ツイート</h3>
-        <div class="grid editor-input-grid">
-          <div>
-            <span class="styletext">文字</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".stream-item" data-prop="color" placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".stream-item" data-prop="color">
-            </div>
-          </div>
-          <div>
-            <span class="styletext">背景</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".stream-item" data-prop="background-color"
-                placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".stream-item" data-prop="background-color">
-            </div>
-          </div>
-          <div>
-            <span class="styletext">丸み</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".stream-item" data-prop="border-radius"
-                placeholder="数値と単位を入力">
-            </div>
-          </div>
-        </div>
-        <h3>ツイート-埋め込み</h3>
-        <div class="grid editor-input-grid">
-          <div>
-            <span class="styletext">丸み(画像)</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".media-item,.media-grid-container" data-prop="border-radius"
-                placeholder="数値と単位を入力">
-            </div>
-            <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
-          </div>
-          <div>
-            <span class="styletext">縁の色(引用)</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".quoted-tweet" data-prop="border-color"
-                placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".quoted-tweet" data-prop="border-color">
-            </div>
-          </div>
-          <div>
-            <span class="styletext">丸み(引用)</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".quoted-tweet" data-prop="border-radius"
-                placeholder="数値と単位を入力">
-            </div>
-          </div>
-        </div>
-        <h3>ツイートアクション</h3>
-        <div class="grid editor-input-grid">
-          <div>
-            <span class="styletext">全体(通常時)</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".tweet-action" data-prop="color" placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".tweet-action" data-prop="color">
-            </div>
-            <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
-          </div>
-          <div>
-            <span class="styletext">リプライ(通常時)</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".tweet-action[rel='reply']" data-prop="color"
-                placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".tweet-action[rel='reply']" data-prop="color">
-            </div>
-            <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
-          </div>
-          <div>
-            <span class="styletext">リツイート(通常時)</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".tweet-action[rel='retweet']" data-prop="color"
-                placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".tweet-action[rel='retweet']" data-prop="color">
-            </div>
-            <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
-          </div>
-          <div>
-            <span class="styletext">いいね(通常時)</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".tweet-action[rel='favorite']" data-prop="color"
-                placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".tweet-action[rel='favorite']" data-prop="color">
-            </div>
-            <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
-          </div>
-          <div>
-            <span class="styletext">メニュー(通常時)</span>
-            <div class="styleform">
-              <input type="text" class="td-css" data-sel=".tweet-action[rel='actionsMenu']" data-prop="color"
-                placeholder="カラーコードを入力">
-              <input type="color" class="td-css" data-sel=".tweet-action[rel='actionsMenu']" data-prop="color">
-            </div>
-            <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
-          </div>
-        </div>
-      </div>
+    <h2>編集箇所</h2>
+    <div class="grid nav">
+      <span class="nav-item" data-edit="col">カラム</span>
+      <span class="nav-item" data-edit="tweet">ツイート</span>
+      <span class="nav-item" data-edit="mdl">モーダル</span>
+      <span class="nav-item" data-edit="dm">DM</span>
+      <span class="nav-item" data-edit="prf">プロフィール</span>
     </div>
+    <section class="editor" id="col">
+      <h2>カラム</h2>
+      <div class="grid editor">
+        <div class="editor-td">
+          <iframe class="td-preview" src="./web/deck/col.html" frameborder="0"></iframe>
+        </div>
+        <div class="editor-input td-theme-light">
+          <h3>本体</h3>
+          <div class="grid editor-input-grid">
+            <div>
+              <span class="styletext">背景</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".column-panel" data-prop="background-color"
+                  placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".column-panel" data-prop="background-color">
+              </div>
+            </div>
+          </div>
+          <h3>ヘッダー</h3>
+          <div class="grid editor-input-grid">
+            <div>
+              <span class="styletext">文字</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".column-header" data-prop="color" placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".column-header" data-prop="color">
+              </div>
+            </div>
+            <div>
+              <span class="styletext">背景</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".column-header" data-prop="background-color"
+                  placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".column-header" data-prop="background-color">
+              </div>
+            </div>
+            <div>
+              <span class="styletext">丸み</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".column-header" data-prop="border-radius"
+                  placeholder="数値と単位を入力">
+              </div>
+            </div>
+            <div>
+              <span class="styletext">設定アイコン</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".column-header-link" data-prop="color"
+                  placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".column-header-link" data-prop="color">
+              </div>
+            </div>
+          </div>
+          <h3>ツイート</h3>
+          <div class="grid editor-input-grid">
+            <div>
+              <span class="styletext">文字</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".stream-item" data-prop="color" placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".stream-item" data-prop="color">
+              </div>
+            </div>
+            <div>
+              <span class="styletext">背景</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".stream-item" data-prop="background-color"
+                  placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".stream-item" data-prop="background-color">
+              </div>
+            </div>
+            <div>
+              <span class="styletext">丸み</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".stream-item" data-prop="border-radius"
+                  placeholder="数値と単位を入力">
+              </div>
+            </div>
+          </div>
+          <h3>ツイート-埋め込み</h3>
+          <div class="grid editor-input-grid">
+            <div>
+              <span class="styletext">丸み(画像)</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".media-item,.media-grid-container" data-prop="border-radius"
+                  placeholder="数値と単位を入力">
+              </div>
+              <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
+            </div>
+            <div>
+              <span class="styletext">縁の色(引用)</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".quoted-tweet" data-prop="border-color"
+                  placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".quoted-tweet" data-prop="border-color">
+              </div>
+            </div>
+            <div>
+              <span class="styletext">丸み(引用)</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".quoted-tweet" data-prop="border-radius"
+                  placeholder="数値と単位を入力">
+              </div>
+            </div>
+          </div>
+          <h3>ツイートアクション</h3>
+          <div class="grid editor-input-grid">
+            <div>
+              <span class="styletext">全体(通常時)</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".tweet-action" data-prop="color" placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".tweet-action" data-prop="color">
+              </div>
+              <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
+            </div>
+            <div>
+              <span class="styletext">リプライ(通常時)</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".tweet-action[rel='reply']" data-prop="color"
+                  placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".tweet-action[rel='reply']" data-prop="color">
+              </div>
+              <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
+            </div>
+            <div>
+              <span class="styletext">リツイート(通常時)</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".tweet-action[rel='retweet']" data-prop="color"
+                  placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".tweet-action[rel='retweet']" data-prop="color">
+              </div>
+              <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
+            </div>
+            <div>
+              <span class="styletext">いいね(通常時)</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".tweet-action[rel='favorite']" data-prop="color"
+                  placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".tweet-action[rel='favorite']" data-prop="color">
+              </div>
+              <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
+            </div>
+            <div>
+              <span class="styletext">メニュー(通常時)</span>
+              <div class="styleform">
+                <input type="text" class="td-css" data-sel=".tweet-action[rel='actionsMenu']" data-prop="color"
+                  placeholder="カラーコードを入力">
+                <input type="color" class="td-css" data-sel=".tweet-action[rel='actionsMenu']" data-prop="color">
+              </div>
+              <span class="stylecaution">注:数値の後に!importantの追加を推奨</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="editor displaynone" id="tweet">
+      <h2>ツイート</h2>
+      <div class="grid editor">
+        <div class="editor-td">
+          <iframe class="td-preview" src="./web/deck/tweet.html" frameborder="0"></iframe>
+        </div>
+        <div class="editor-input td-theme-light">
+          <h3>本体</h3>
+          仮作成
+        </div>
+      </div>
+    </section>
+    <section class="editor displaynone" id="mdl">
+      <h2>モーダル</h2>
+      <div class="grid editor">
+        <div class="editor-td">
+          <iframe class="td-preview" src="./web/deck/mdl.html" frameborder="0"></iframe>
+        </div>
+        <div class="editor-input td-theme-light">
+          <h3>本体</h3>
+          仮作成
+        </div>
+      </div>
+    </section>
+    <section class="editor displaynone" id="dm">
+      <h2>DM</h2>
+      <div class="grid editor">
+        <div class="editor-td">
+          <iframe class="td-preview" src="./web/deck/dm.html" frameborder="0"></iframe>
+        </div>
+        <div class="editor-input td-theme-light">
+          <h3>本体</h3>
+          仮作成
+        </div>
+      </div>
+    </section>
+    <section class="editor displaynone" id="prf">
+      <h2>プロフィール</h2>
+      <div class="grid editor">
+        <div class="editor-td">
+          <iframe class="td-preview" src="./web/deck/prf.html" frameborder="0"></iframe>
+        </div>
+        <div class="editor-input td-theme-light">
+          <h3>本体</h3>
+          仮作成
+        </div>
+      </div>
+    </section>
+
     <h2>出力</h2>
     <div class="editor-input" style="height: auto;">
       <h3>設定</h3>
@@ -266,7 +319,7 @@
           </div>
         </div>
       </div>
-      <input type="checkbox" id="add-html-dark"><label for="add-html-dark">ダークモードも同配色を保つ</label>
+      <input type="checkbox" id="add-html-dark"><label for="add-html-dark">ダークモードによるテーマの上書きを防ぐ</label>
       <h3>インポート可能形式(Json)</h3>
       <input type="text" class="td-css-obj" onfocus="this.select();">
       <div class="grid half">

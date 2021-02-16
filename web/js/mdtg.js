@@ -1,4 +1,4 @@
-let mdtgver = "0.18";
+let mdtgver = "0.19";
 
 let mdTheme = {
   mdtgVer: mdtgver,
@@ -44,7 +44,7 @@ function cssInput() {
       }
     }
   })
-  $('.td-preview').contents().find('style').text(tdCss);
+  $('.td-preview').contents().find('style#mdtg-style').text(tdCss);
   output();
 };
 
@@ -71,7 +71,7 @@ function cssImport () {
     })
     tdCss = tdCss + "}\n"
   })
-  $('.td-preview').contents().find('style').text(tdCss);
+  $('.td-preview').contents().find('style#mdtg-style').text(tdCss);
   output();
 }
 
@@ -111,6 +111,12 @@ $(function () {
       addHtmlDark = false;
       cssInput();
     }
+  });
+
+  $("span.nav-item").click(function () {
+    let edit = $(this).data('edit');
+    $('section.editor').addClass("displaynone");
+    $(`section#${edit}`).removeClass("displaynone");
   });
 
   $('input.td-css').change(function () {

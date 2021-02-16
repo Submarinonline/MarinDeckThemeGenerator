@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://ton.twimg.com/tweetdeck-web/web/dist/bundle.70fc5d8e75.css" rel="stylesheet">
+  <link rel="stylesheet" href="marindeckbase.css">
+  <title>tweet</title>
+
+  <style id="mdtg-style">
+
+  </style>
+</head>
+
+<body style="margin: 0;">
+  <div class="js-app-content app-content is-open"
+    style="transition-duration: 200ms; transform: translateX(270px); margin-right: 270px;">
+    <div class="js-drawer drawer" data-drawer="compose">
+      <div>
+        <div>
+          <div class="js-docked-compose compose txt-size--14">
+            <div class="js-compose-scroller compose-content antiscroll-wrap pin-all">
+              <div class="antiscroll-inner scroll-v scroll-styled-v padding-h--15" style="right: 0px; bottom: 0px;">
+                <header class="js-compose-header compose-header">
+                  <div class="position-rel compose-title inline-block">
+                    <h1 class="js-compose-title compose-title-text txt-ellipsis inline-block">New Tweet</h1>
+                  </div> <i class="js-compose-close is-actionable icon icon-close margin-v--20 pull-right"></i>
+                </header>
+                <div class="js-inline-confirmation margin-bxl"></div>
+                <div class="margin-v--14 cf">
+                  <div class="pull-left compose-text-title"> From </div>
+                  <div class="js-account-selector-grid-toggle pull-right account-selector-grid-toggle"><a
+                      class="pull-left margin-r--6 is-actionable account-selector-grid-mode " data-grid-mode="grid"><i
+                        class="color-twitter-white icon icon-compose-grid"></i><span
+                        class="is-vishidden">grid</span></a> <a
+                      class="pull-left margin-r--6 is-actionable account-selector-grid-mode "
+                      data-grid-mode="minigrid"><i class="color-twitter-white icon icon-compose-minigrid"></i><span
+                        class="is-vishidden">grid</span></a> <a
+                      class="pull-left is-actionable account-selector-grid-mode is-selected" data-grid-mode="list"><i
+                        class="color-twitter-white icon icon-compose-list"></i><span
+                        class="is-vishidden">grid</span></a></div>
+                </div> <!-- Accounts -->
+                <div class="js-account-list">
+                  <div class="margin-b--11 compose-accounts flex flex-wrap--wrap is-list"> <a
+                      class="js-account-item  compose-account is-actionable is-selected cf link-clean" tabindex="0"
+                      title="@ElectronicsBot" data-account-key="twitter:1105445755056078848">
+                      <div class="position-rel obj-left"> <img
+                          src="https://play-lh.googleusercontent.com/zDN4k87aHiaO6OXpxtFiwOvfV7LDfcdYS-nysEUjivti7aeFvLTivgR6HIpql0qqOWw=s180-rw" alt=""
+                          width="32" height="32" class="avatar compose-account-img size32">
+                        <div class="compose-account-selected"><i class="icon icon-check txt-size--12"></i></div>
+                      </div>
+                      <div class="nbfc compose-account-names link-clean"> <b
+                          class="txt-size--14 txt-ellipsis inline-block">MarinDeck</b>
+                        <p class="txt-size--13 txt-ellipsis">@MarinDeck</p>
+                      </div>
+                    </a> <a class="js-account-item  compose-account is-actionable  cf link-clean" tabindex="0"
+                      title="@EIectronicsBot" data-account-key="twitter:1343391165031145474">
+                      <div class="position-rel obj-left"> <img
+                          src="https://m.submarin.online/i/lg.jpg" alt=""
+                          width="32" height="32" class="avatar compose-account-img size32">
+                        <div class="compose-account-selected"><i class="icon icon-check txt-size--12"></i></div>
+                      </div>
+                      <div class="nbfc compose-account-names link-clean"> <b
+                          class="txt-size--14 txt-ellipsis inline-block">hakunagi</b>
+                        <p class="txt-size--13 txt-ellipsis">@ElectronicsBot</p>
+                      </div>
+                    </a> </div>
+                </div> <!-- end Accounts -->
+                <!-- Direct Message -->
+                <div
+                  class="js-compose-message-recipient-container compose-message-recipient-container margin-bxl position-rel cf is-hidden">
+                  <p class="padding-b--9 compose-text-title">To</p>
+                  <div
+                    class="js-compose-message-recipient-input-container compose-message-recipient-input-container scroll-v position-rel bg-color-twitter-white br--4">
+                    <div
+                      class="js-compose-message-recipient-list flex flex-wrap--wrap compose-message-recipient-list position-rel is-hidden cf border-box padding-r--4 padding-b--4 br--4 padding-l--4">
+                    </div> <!-- message recipient input --> <input type="text"
+                      class="js-compose-message-account js-non-escapable-input compose-message-account light-on-dark">
+                    <a href="#" class="js-clear-input txt-size--14 input-clear-control" tabindex="-1"> <i
+                        class="icon icon-close icon-small txt-size--18"></i> </a>
+                  </div>
+                  <div
+                    class="js-typeahead-dropdown border-box typeahead-dropdown dropdown-menu br--6 bs-1 is-hidden scroll-v scroll-styled-v padding-v--0">
+                    <ul class="js-typeahead-conversation-list is-hidden"></ul>
+                    <ul class="js-typeahead-user-list is-hidden"></ul>
+                  </div>
+                </div> <!-- end Direct Message -->
+                <div class="js-compose-message-header margin-b--9 compose-text-title">Tweet</div>
+                <!-- reply to tweet -->
+                <div class="js-in-reply-to compose-reply-tweet padding-al margin-b---4 br-top--4 is-hidden"></div>
+                <!-- end reply to tweet -->
+                <!-- Compose box -->
+                <div class="position-rel compose-text-container padding-a--10 br--4">
+                  <!-- Simplified replies container -->
+                  <div class="js-reply-info-container is-hidden txt-size--12 padding-b--6"></div> <textarea
+                    class="js-compose-text compose-text bg-color-twitter-white txt-size--14 scroll-v scroll-styled-v scroll-styled-h scroll-alt padding-a--0"
+                    placeholder="What's happening?" style="height: 130px;"></textarea>
+                  <ul class="lst lst-modal typeahead" style="display: none;"></ul>
+                  <div class="txt-right height--16 margin-t--4  margin-r---3 margin-b--1"> <span
+                      class="js-character-count txt-size--12 color-twitter-dark-gray bg-color-transparent no-border txt-line-height--20 margin-r--6 is-hidden"
+                      style="display: inline;">280</span> <span class="js-progress-svg"> <svg
+                        class="pull-right height--20 width--20 rotate---90">
+                        <circle class="stroke-twitter-light-gray" cx="50%" cy="50%" r="8" fill="none" stroke-width="2">
+                        </circle>
+                        <circle class="js-progress-circle stroke-twitter-blue" cx="50%" cy="50%" r="8" fill="none"
+                          stroke-width="2" style="stroke-dasharray: 50.2655; stroke-dashoffset: 50.2655;"></circle>
+                      </svg> </span> </div>
+                </div> <!-- Media bar -->
+                <div class="js-media-added is-hidden"></div> <!-- Quote Tweet -->
+                <div
+                  class="js-quote-tweet-holder padding-a--10 bg-color-twitter-white is-inverted-dark margin-t---4 br-bottom--4 is-hidden">
+                </div> <!-- End compose box -->
+                <!-- Hint bar -->
+                <div class="js-compose-hint margin-vl">
+                  <div class=" is-hidden"> </div>
+                </div> <!-- safeguard checkbox -->
+                <div class="js-account-safeguard-checkbox cf margin-v--7 is-hidden"> <label
+                    for="account-safeguard-checkbox" class="pull-right txt-size-variable--12"><span
+                      class="js-account-safeguard-text">Ready to Tweet?</span> <input id="account-safeguard-checkbox"
+                      class="on-blue" type="checkbox"></label> </div> <!-- Send tweet button  & character count -->
+                <div class="cf margin-t--12 margin-b--30">
+                  <div class="pull-right">
+                    <div class="js-send-button-container spinner-button-container"> <button
+                        class="js-send-button js-spinner-button js-show-tip Button--primary btn-extra-height padding-v--6 padding-h--12 is-disabled"
+                        data-original-title="Tweet (Ctrl+Enter)">Tweet</button> <i
+                        class="js-compose-sending-success icon-center-16 compose-send-button-success icon icon-check is-hidden"></i>
+                      <span class="js-media-upload-progress media-upload-progress is-hidden"></span> <i
+                        class="js-spinner-button-active icon-center-16 spinner-button-icon-spinner is-hidden"></i>
+                    </div>
+                  </div>
+                </div> <!-- Option buttons --> <button
+                  class="js-add-image-button js-show-tip needsclick btn btn-on-blue full-width txt-left margin-b--12 padding-v--6 padding-h--12"
+                  data-original-title="" tabindex=""> <i class="Icon icon-camera txt-size--18"></i> <span
+                    class="js-add-image-button-label label padding-ls">Add images or video</span> </button>
+                <div class="js-scheduler"> <button
+                    class="js-schedule-button js-show-tip btn btn-on-blue full-width txt-left margin-b--12 padding-v--6 padding-h--12"
+                    tabindex="" data-original-title=""> <i class="Icon icon-schedule txt-size--18"></i> <span
+                      class="js-schedule-button-label label padding-ls">Schedule Tweet</span> </button> <span
+                    class="js-schedule-datepicker-holder">
+                    <div class="popover popover-position-t bg-color-twitter-white margin-ll padding-a--3"
+                      style="display: none;">
+                      <div class="caret"> <span class="caret-outer"></span> <span class="caret-inner"></span> </div>
+                      <div class="cal">
+                        <header> <input id="scheduled-hour" type="text" pattern="\d*" inputmode="numeric" tabindex="2"
+                            class="light-on-dark"> <span>:</span> <input id="scheduled-minute" type="text" pattern="\d*"
+                            inputmode="numeric" tabindex="3" class="light-on-dark"> <button id="amPm"
+                            class="Button Button--small" data-value=""> <span class="label"></span> </button> </header>
+                        <div id="calendar" class="form-calendar">
+                          <div class="nav-group button-group"> <button id="prev-month" class="btn-round"> <i
+                                class="Icon icon-arrow-l icon-center-16"></i> </button> <button id="next-month"
+                              class="btn-round"> <i class="Icon icon-arrow-r icon-center-16"></i> </button> </div>
+                          <input id="datepicker" name="datepicker" class="date">
+                          <div id="calroot" style="position: relative;">
+                            <div id="calhead">
+                              <div id="caltitle">February 2021</div>
+                            </div>
+                            <div id="calbody">
+                              <div id="caldays">
+                                <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                              </div>
+                              <div id="calweeks">
+                                <div class="calweek"><a class="caloff caldisabled" href="#31">31</a><a
+                                    class="caldisabled" href="#1">1</a><a class="caldisabled" href="#2">2</a><a
+                                    class="caldisabled" href="#3">3</a><a class="caldisabled" href="#4">4</a><a
+                                    class="caldisabled" href="#5">5</a><a class="caldisabled" href="#6">6</a></div>
+                                <div class="calweek"><a class="caldisabled" href="#7">7</a><a class="caldisabled"
+                                    href="#8">8</a><a class="caldisabled" href="#9">9</a><a class="caldisabled"
+                                    href="#10">10</a><a class="caldisabled" href="#11">11</a><a class="caldisabled"
+                                    href="#12">12</a><a class="caldisabled" href="#13">13</a></div>
+                                <div class="calweek"><a class="caldisabled" href="#14">14</a><a class="caldisabled"
+                                    href="#15">15</a><a id="calcurrent" class="calfocus" href="#16">16</a><a
+                                    href="#17">17</a><a href="#18">18</a><a href="#19">19</a><a href="#20">20</a></div>
+                                <div class="calweek"><a href="#21">21</a><a href="#22">22</a><a href="#23">23</a><a
+                                    href="#24">24</a><a href="#25">25</a><a href="#26">26</a><a href="#27">27</a></div>
+                                <div class="calweek"><a href="#28">28</a><a class="caloff" href="#1">1</a><a
+                                    class="caloff" href="#2">2</a><a class="caloff" href="#3">3</a><a class="caloff"
+                                    href="#4">4</a><a class="caloff" href="#5">5</a><a class="caloff" href="#6">6</a>
+                                </div>
+                                <div class="calweek"><a class="caloff" href="#7">7</a><a class="caloff"
+                                    href="#8">8</a><a class="caloff" href="#9">9</a><a class="caloff"
+                                    href="#10">10</a><a class="caloff" href="#11">11</a><a class="caloff"
+                                    href="#12">12</a><a class="caloff" href="#13">13</a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="padding-as"> <button class="js-remove Button--danger full-width"> <i
+                            class="Icon icon-trash Icon--large"></i> <span>Remove</span> </button> </div>
+                    </div>
+                  </span> </div>
+                <div class="js-tweet-type-button"> <button
+                    class="js-tweet-button btn btn-on-blue full-width txt-left margin-b--12 padding-v--6 padding-h--12 is-hidden">
+                    <i class="Icon icon-twitter-bird txt-size--18"></i> <span class="label padding-ls">New Tweet</span>
+                  </button> <button
+                    class="js-dm-button js-show-tip btn btn-on-blue full-width txt-left padding-v--6 padding-h--12 margin-b--12"
+                    data-original-title="" tabindex=""> <i class="Icon icon-message txt-size--18"></i> <span
+                      class="label padding-ls">Direct message</span> </button> </div>
+                <div class="js-new-composer-upsell-padding height--40"></div> <!-- end option buttons -->
+              </div>
+            </div>
+            <footer class="pin-bottom-full-width old-composer-footer"> <label
+                class="checkbox checkbox-reversed compose-remember-state margin-a--15 txt-right"> Stay open <input
+                  class="js-compose-stay-open on-blue" type="checkbox"> </label> </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="js-drawer drawer is-hidden" data-drawer="accountSettings">
+      <div class="js-accounts-column-holder column-holder txt-size--14">
+        <div class="js-account-manager-container column-panel accounts-drawer border-box flex flex-column">
+          <header class="drawer-header padding-lxl flex-shrink--0">
+            <h1 class="column-title"> <span class="drawer-header-title block drawer-column-header-title">Accounts</span>
+            </h1> <a class="js-drawer-close column-close-link color-twitter-darker-gray" href="#" data-action="options">
+              <i class="icon icon-close icon-center-24"></i> </a>
+          </header>
+          <div class="js-account-settings-scroll-container scroll-v margin-b---1">
+            <div class="accordion is-active">
+              <div class="js-account-settings-login-account is-active"></div>
+              <div class="js-invitations-panel"></div>
+              <div
+                class="js-account-settings-team-info padding-v--12 txt-size--13 color-twitter-darker-gray txt-bold padding-hxl position-rel account-row-separator-b is-hidden">
+                Accounts you can act as </div>
+              <div class="js-account-settings-accounts"></div>
+            </div>
+            <div class="js-account-invited-accounts"></div>
+            <div class="join-team margin-t--10 width-p--100"> <a href="#"
+                class="js-log-in-account txt-size--13 padding-hxl txt-line-height--40">Link another account you own</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="js-contributor-manager-container column-panel border-box bg-color-twitter-lightest-gray flex flex-column">
+        </div>
+        <div class="js-team-invitations-container column-panel border-box bg-color-twitter-lightest-gray">
+          <div class="drawer-header padding-lxl">
+            <h1 class="js-team-invitations-back is-actionable pull-left txt-weight-normal"> <span
+                class="drawer-header-title block drawer-column-header-title"> <i class="icon icon-arrow-l icon-tt"></i>
+                Team invitations </span> </h1> <a class="js-drawer-close column-close-link color-twitter-darker-gray"
+              href="#"> <i class="icon icon-close icon-center-24"></i> </a>
+          </div>
+          <div class="js-team-invitations team-invitations drawer-content pin-all scroll-v"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

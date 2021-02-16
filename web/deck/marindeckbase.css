@@ -49,16 +49,6 @@ body .touch-device .margin-vm {
   left: 0 !important
 }
 
-.mdl-dismiss {
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  background-color: #0000007f;
-  border-radius: 100%;
-  top: 10px !important;
-  right: 10px !important
-}
-
 .mdl-inner>.horizontal-flow-container {
   white-space: normal !important
 }
@@ -211,10 +201,6 @@ input:focus {
   padding-left: 0 !important
 }
 
-.is-touch-modal .mdl-dismiss i {
-  font-size: 25px !important
-}
-
 .link-complex:hover {
   text-decoration: none !important
 }
@@ -259,6 +245,10 @@ body .mdl-media-prev {
 
 .lst-launcher.cf>li {
   width: calc(100%/3) !important
+}
+
+.mdl-column-rhs {
+  width: calc(100% - 260px) !important;
 }
 
 @media(orientation:portrait) {
@@ -334,16 +324,33 @@ body .mdl-media-prev {
   padding-bottom: 0 !important;
 }
 
+.mdl-dismiss {
+  padding: 6px !important;
+  top: 0 !important;
+  right: 0 !important;
+  opacity: .7 !important
+}
+
+.mdl-dismiss:hover {
+  opacity: 1 !important
+}
+
+.mdl-dismiss>i {
+  color: #fff !important;
+  background-color: #38444d !important;
+  border-radius: 100% !important;
+  padding: 4px !important;
+  line-height: 16px !important;
+  font-size: 20px !important;
+  box-sizing: content-box !important
+}
+
 .numbered-badge {
   box-sizing: content-box !important;
 }
 
 .js-scheduler .popover *:not(input):not(button) {
   box-sizing: content-box !important;
-}
-
-.mdl-dismiss {
-  color: white !important;
 }
 
 .compose-text-container>.txt-right {
@@ -368,10 +375,11 @@ body .mdl-media-prev {
   margin-bottom: 6px !important;
 }
 
-.compose .Icon--close,
-.compose .icon-close {
+.icon,
+.Icon {
   box-sizing: content-box !important;
 }
+
 
 /* ここからオプション */
 
