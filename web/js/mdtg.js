@@ -1,4 +1,4 @@
-let mdtgver = "0.19";
+let mdtgver = "0.19.1";
 
 let mdTheme = {
   mdtgVer: mdtgver,

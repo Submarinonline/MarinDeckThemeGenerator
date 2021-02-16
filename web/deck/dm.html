@@ -11,7 +11,297 @@
   <style id="mdtg-style">
 
   </style>
-  <script src="./md-dm-v7.min.js"></script>
+  <style id="md-style-dm">
+    .md-customDM-container,
+    .md-customDM-rpl,
+    .md-customDM>article {
+      transform: rotate(180deg)
+    }
+
+    .md-customDM>article {
+      border: none !important;
+      margin: 6px 0 !important
+    }
+
+    .md-customDM>article .tweet,
+    .md-customDM>article .tweet>div,
+    .md-customDM>article .tweet>header {
+      transform: rotate(180deg)
+    }
+
+    .md-customDM>article .tweet {
+      padding-left: 0;
+      padding-right: 46px
+    }
+
+    .md-customDM>article .tweet>header {
+      margin-bottom: 1px
+    }
+
+    .md-customDM>article .tweet>header>time {
+      position: absolute;
+      top: -3px;
+      left: 0
+    }
+
+    .md-customDM>article .tweet>header>a {
+      display: inline-block !important;
+      color: #a0abb3
+    }
+
+    .md-customDM>article .tweet>header>a>div {
+      bottom: 55px
+    }
+
+    .md-customDM>article .tweet>header .username {
+      display: none
+    }
+
+    .md-customDM>article .tweet>header>a>div.nbfc {
+      display: none
+    }
+
+    .md-customDM>article .tweet>div.tweet-body {
+      width: 80%;
+      margin-left: 20%
+    }
+
+    .md-customDM>article .tweet>div.tweet-body>* {
+      display: inline-block
+    }
+
+    .md-customDM>article .tweet>div.tweet-body>.tweet-text {
+      width: auto !important;
+      max-width: 100%;
+      padding: 8px 10px;
+      box-sizing: border-box
+    }
+
+    .md-customDM>article .tweet>div.tweet-body>.media-preview {
+      width: 100%;
+      margin: 0 !important
+    }
+
+    .md-customDM>article .tweet>div.tweet-body>.media-preview>div {
+      margin: 0 !important
+    }
+
+    .md-customDM>article .tweet>div.tweet-body>footer {
+      position: absolute;
+      bottom: 0;
+      margin-left: 6px
+    }
+
+    .js-detail-container>div:not(.js-detail-content)>.rpl {
+      padding-bottom: 50px
+    }
+
+    .md-customDM>article.md-myMsg {
+      transform: scale(1, -1)
+    }
+
+    .md-customDM>article.md-myMsg .dropdown-menu,
+    .md-customDM>article.md-myMsg .tweet>div.tweet-body>:not(footer),
+    .md-customDM>article.md-myMsg .tweet>header>a>div.item-img,
+    .md-customDM>article.md-myMsg .tweet>header>a>div.nbfc>span,
+    .md-customDM>article.md-myMsg .tweet>header>time {
+      transform: scale(-1, 1)
+    }
+
+    .md-customDM>article.md-myMsg .tweet {
+      padding-right: 0
+    }
+
+    .md-customDM>article.md-myMsg .tweet>header .tweet-avatar {
+      display: none
+    }
+
+    .md-customDM>article.md-myMsg .tweet>div.tweet-body>.tweet-text a {
+      text-decoration: underline
+    }
+
+    .md-customDM>article .tweet>div.tweet-body>.quoted-tweet {
+      border-color: #1da1f2 !important;
+      width: 100%;
+      margin: 0 !important;
+      box-sizing: border-box
+    }
+
+    html .md-customDM>article .tweet>div.tweet-body>.tweet-text.md-emojionly,
+    html.dark .md-customDM>article .tweet>div.tweet-body>.tweet-text.md-emojionly {
+      margin: 0 0 2px 0 !important;
+      padding: 0 !important;
+      overflow: visible !important;
+      background-color: #0000 !important
+    }
+
+    .md-customDM>article .tweet>div.tweet-body>.tweet-text.md-emojionly>* {
+      width: 2.2em !important;
+      height: 2.2em !important
+    }
+
+    .md-customDM .tweet-timestamp {
+      padding-left: 0 !important
+    }
+
+    .md-customDM>article .tweet>div.tweet-body>.media-preview .media-item,
+    .md-customDM>article .tweet>div.tweet-body>.quoted-tweet,
+    .md-customDM>article .tweet>div.tweet-body>.tweet-text {
+      border-radius: 16px 16px 16px 0 !important
+    }
+
+    .md-customDM>article.md-myMsg .tweet>div.tweet-body>.media-preview .media-item,
+    .md-customDM>article.md-myMsg .tweet>div.tweet-body>.quoted-tweet,
+    .md-customDM>article.md-myMsg .tweet>div.tweet-body>.tweet-text {
+      border-radius: 16px 16px 0 16px !important
+    }
+
+    .md-customDM>article.md-imgWithText .tweet>div.tweet-body>.tweet-text,
+    .md-customDM>article.md-quotedWithText .tweet>div.tweet-body>.tweet-text {
+      border-radius: 0 0 16px 0 !important
+    }
+
+    .md-customDM>article.md-imgWithText .tweet>div.tweet-body>.media-preview .media-item,
+    .md-customDM>article.md-quotedWithText .tweet>div.tweet-body>.quoted-tweet {
+      border-radius: 16px 16px 0 0 !important
+    }
+
+    .md-customDM>article.md-myMsg.md-imgWithText .tweet>div.tweet-body>.tweet-text,
+    .md-customDM>article.md-myMsg.md-quotedWithText .tweet>div.tweet-body>.tweet-text {
+      border-radius: 0 0 0 16px !important
+    }
+
+    .md-customDM>article.md-imgWithText .tweet>div.tweet-body>.tweet-text,
+    .md-customDM>article.md-quotedWithText .tweet>div.tweet-body>.tweet-text {
+      width: 100% !important;
+      margin-top: -5px !important
+    }
+
+    .md-customDM>article .tweet>div.tweet-body>footer {
+      display: none
+    }
+
+    .md-customDM>article[md-onajiuser=bottom] .tweet>header,
+    .md-customDM>article[md-onajiuser=top] .tweet>header {
+      background-color: #6d0000 !important;
+      display: none
+    }
+
+    html .md-customDM>article[md-onajiuser=top],
+    html.dark .md-customDM>article[md-onajiuser=top] {
+      margin: -1px 0 6px !important
+    }
+
+    html .md-customDM>article[md-onajiuser=top]>div,
+    html.dark .md-customDM>article[md-onajiuser=top]>div {
+      padding: 8px 10px 0 !important
+    }
+
+    html .md-customDM>article[md-onajiuser=bottom],
+    html.dark .md-customDM>article[md-onajiuser=bottom] {
+      margin: -1px 0 0 !important
+    }
+
+    html .md-customDM>article[md-onajiuser=bottom]>div,
+    html.dark .md-customDM>article[md-onajiuser=bottom]>div {
+      padding: 0 10px !important
+    }
+
+    html .md-customDM>article[md-onajiuser='bottom last'],
+    html.dark .md-customDM>article[md-onajiuser='bottom last'] {
+      margin: 6px 0 -1px !important
+    }
+
+    html .md-customDM>article[md-onajiuser='bottom last']>div,
+    html.dark .md-customDM>article[md-onajiuser='bottom last']>div {
+      padding: 0 10px 8px !important
+    }
+
+    .md-customDM>article[md-onajiuser~=bottom] .tweet>div.tweet-body>.media-preview .media-item,
+    .md-customDM>article[md-onajiuser~=bottom] .tweet>div.tweet-body>.quoted-tweet,
+    .md-customDM>article[md-onajiuser~=bottom] .tweet>div.tweet-body>.tweet-text {
+      border-radius: 0 16px 16px 0 !important
+    }
+
+    .md-customDM>article[md-onajiuser~=bottom].md-myMsg .tweet>div.tweet-body>.media-preview .media-item,
+    .md-customDM>article[md-onajiuser~=bottom].md-myMsg .tweet>div.tweet-body>.quoted-tweet,
+    .md-customDM>article[md-onajiuser~=bottom].md-myMsg .tweet>div.tweet-body>.tweet-text {
+      border-radius: 16px 0 0 16px !important
+    }
+
+    html .md-customDM>article[md-onajiuser] .tweet>div.tweet-body>.tweet-text.md-emojionly {
+      margin-bottom: 10px !important
+    }
+
+    .md-customDM>article[md-onajiuser~=bottom].md-imgWithText .tweet>div.tweet-body>.media-preview .media-item,
+    .md-customDM>article[md-onajiuser~=bottom].md-quotedWithText .tweet>div.tweet-body>.quoted-tweet {
+      border-radius: 0 16px 0 0 !important
+    }
+
+    .md-customDM>article[md-onajiuser~=bottom].md-imgWithText .tweet>div.tweet-body>.tweet-text,
+    .md-customDM>article[md-onajiuser~=bottom].md-quotedWithText .tweet>div.tweet-body>.tweet-text {
+      border-radius: 0 0 16px 0 !important
+    }
+
+    .md-customDM>article[md-onajiuser~=bottom].md-myMsg.md-imgWithText .tweet>div.tweet-body>.media-preview .media-item,
+    .md-customDM>article[md-onajiuser~=bottom].md-myMsg.md-quotedWithText .tweet>div.tweet-body>.quoted-tweet {
+      border-radius: 16px 0 0 0 !important
+    }
+
+    .md-customDM>article[md-onajiuser~=bottom].md-myMsg.md-imgWithText .tweet>div.tweet-body>.tweet-text,
+    .md-customDM>article[md-onajiuser~=bottom].md-myMsg.md-quotedWithText .tweet>div.tweet-body>.tweet-text {
+      border-radius: 0 0 0 16px !important
+    }
+
+    html .js-message-detail.md-customDM>article,
+    html.dark .js-message-detail.md-customDM>article {
+      background-color: #0000 !important
+    }
+
+    html .md-customDM>article .tweet>.tweet-body>.tweet-text {
+      background-color: #ebeef0;
+      color: #0f1419
+    }
+
+    html.dark .md-customDM>article .tweet>.tweet-body>.tweet-text {
+      background-color: #3d5466;
+      color: #fff
+    }
+
+    html .md-customDM>article.md-myMsg .tweet>.tweet-body>.tweet-text {
+      background-color: #1da1f2;
+      color: #fff
+    }
+
+    html.dark .md-customDM>article.md-myMsg .tweet>.tweet-body>.tweet-text {
+      background-color: #1da1f2;
+      color: #fff
+    }
+
+    html .md-customDM>article .tweet>.tweet-body>.quoted-tweet {
+      border-color: #ebeef0 !important
+    }
+
+    html.dark .md-customDM>article .tweet>.tweet-body>.quoted-tweet {
+      border-color: #3d5466 !important
+    }
+
+    html .md-customDM>article.md-myMsg .tweet>.tweet-body>.quoted-tweet {
+      border-color: #1da1f2 !important
+    }
+
+    html.dark .md-customDM>article.md-myMsg .tweet>.tweet-body>.quoted-tweet {
+      border-color: #1da1f2 !important
+    }
+
+    html .md-customDM>article.md-myMsg .tweet>.tweet-body>.tweet-text>a {
+      color: #fff
+    }
+
+    html.dark .md-customDM>article.md-myMsg .tweet>.tweet-body>.tweet-text>a {
+      color: #fff
+    }
+  </style>
 </head>
 
 <body style="margin: 0;">
@@ -144,9 +434,10 @@
                             <p class="js-quoted-tweet-text with-linebreaks">DMを公式クライアントっぽくしました</p>
                           </div>
                         </div>
-                        <p style="white-space: normal;" class="js-tweet-text tweet-text with-linebreaks full-width">これは <a
-                            href="https://twitter.com/mdr_anm/" rel="user" data-user-name="mdr_anm" class="link-complex"
-                            target="_blank"><span>@</span><span class="link-complex-target">mdr_anm</span></a>
+                        <p style="white-space: normal;" class="js-tweet-text tweet-text with-linebreaks full-width">これは
+                          <a href="https://twitter.com/mdr_anm/" rel="user" data-user-name="mdr_anm"
+                            class="link-complex" target="_blank"><span>@</span><span
+                              class="link-complex-target">mdr_anm</span></a>
                           が作ったのか</p>
                         <footer class="tweet-footer cf">
                           <ul class="tweet-actions">
