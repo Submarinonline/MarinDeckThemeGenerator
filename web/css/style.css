@@ -15,12 +15,12 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-template-rows: 40px;
   place-items: center;
 }
 
 
 .nav span {
+  margin: 10px 0;
   color: #41adef;
   display: block;
   width:100%;

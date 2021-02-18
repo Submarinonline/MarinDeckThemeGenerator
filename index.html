@@ -35,6 +35,7 @@
         <h3>インポート</h3>
         <input type="text" class="td-css-import" style="width: calc(100% - 7rem - 15px);" placeholder="Jsonを入力">
         <input type="button" class="td-css-import" value="インポート" style="width: 6rem;">
+        <p class="stylecaution">出力したJsonを入力することでテーマの編集状況を復元することが出来ます。</p>
         <h3>テーマ</h3>
         <div id="change-theme">
           <input type="radio" checked="checked" name="td-theme" id="td-theme-light" value="0"><label
@@ -84,10 +85,15 @@
     <h2>編集箇所</h2>
     <div class="grid nav">
       <span class="nav-item" data-edit="col">カラム</span>
-      <span class="nav-item" data-edit="tweet">ツイート</span>
+      <!--<span class="nav-item" data-edit="tweetdetail">ツイート詳細(未)</span>-->
+      <span class="nav-item" data-edit="newtweet">新規ツイート</span>
+      <!--<span class="nav-item" data-edit="account">アカウント管理(未)</span>-->
+      <!--<span class="nav-item" data-edit="drop">ドロップメニュー(未)</span>-->
       <span class="nav-item" data-edit="mdl">モーダル</span>
       <span class="nav-item" data-edit="dm">DM</span>
       <span class="nav-item" data-edit="prf">プロフィール</span>
+      <!--<span class="nav-item" data-edit="search">検索(未)</span>-->
+      <!--<span class="nav-item" data-edit="imgviewer">画像ビューア(未)</span>-->
     </div>
     <section class="editor" id="col">
       <h2>カラム</h2>
@@ -241,7 +247,7 @@
         </div>
       </div>
     </section>
-    <section class="editor displaynone" id="tweet">
+    <section class="editor displaynone" id="newtweet">
       <h2>ツイート</h2>
       <div class="grid editor">
         <div class="editor-td">
@@ -322,6 +328,7 @@
       <input type="checkbox" id="add-html-dark"><label for="add-html-dark">ダークモードによるテーマの上書きを防ぐ</label>
       <h3>インポート可能形式(Json)</h3>
       <input type="text" class="td-css-obj" onfocus="this.select();">
+      <p class="stylecaution">このJsonを保管することでテーマの編集状況を保存することが出来ます。</p>
       <div class="grid half">
         <div>
           <h3>CSS</h3>
