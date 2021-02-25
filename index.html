@@ -327,26 +327,26 @@
       </div>
       <input type="checkbox" id="add-html-dark"><label for="add-html-dark">ダークモードによるテーマの上書きを防ぐ</label>
       <h3>インポート可能形式(Json)</h3>
-      <input type="text" class="td-css-obj" onfocus="this.select();">
+      <input type="text" class="td-css-obj" onclick="outputCopy(this.value)">
       <p class="stylecaution">このJsonを保管することでテーマの編集状況を保存することが出来ます。</p>
       <div class="grid half">
         <div>
           <h3>CSS</h3>
-          <textarea class="td-css-text" onfocus="this.select();"></textarea>
+          <textarea class="td-css-text" onclick="outputCopy(this.value)"></textarea>
         </div>
         <div>
           <h3>CSS(改行なし)</h3>
-          <textarea class="td-css-text-min" onfocus="this.select();"></textarea>
+          <textarea class="td-css-text-min" onclick="outputCopy(this.value)"></textarea>
         </div>
       </div>
       <div class="grid half">
         <div>
           <h3>JavaScript</h3>
-          <textarea class="td-js" onfocus="this.select();"></textarea>
+          <textarea class="td-js" onclick="outputCopy(this.value)"></textarea>
         </div>
         <div>
           <h3>JavaScript(改行なし・テーマ提出用)</h3>
-          <textarea class="td-js-min" onfocus="this.select();"></textarea>
+          <textarea class="td-js-min" onclick="outputCopy(this.value)"></textarea>
         </div>
       </div>
     </div>
@@ -384,11 +384,11 @@
       <div class="grid half">
         <div>
           <h3>JavaScript</h3>
-          <textarea class="td-js2" onfocus="this.select();"></textarea>
+          <textarea class="td-js2" onclick="outputCopy(this.value)"></textarea>
         </div>
         <div>
           <h3>JavaScript(改行なし・テーマ提出用)</h3>
-          <textarea class="td-js2-min" onfocus="this.select();"></textarea>
+          <textarea class="td-js2-min" onclick="outputCopy(this.value)"></textarea>
         </div>
       </div>
     </div>

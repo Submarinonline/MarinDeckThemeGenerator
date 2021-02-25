@@ -100,6 +100,16 @@ function togglemenu() {
   $('header').toggleClass('menuopen');
 }
 
+const outputCopy = (val) => {
+  const clip = navigator.clipboard
+  if (!val || !clip) {
+    return false
+  }
+  clip.writeText(val)
+  console.log(`コピーしました:\n${val}`)
+  return true
+}
+
 $(function () {
   $('#mdtg-ver').text(mdtgver);
   $('.td-theme-dark').addClass('displaynone');
