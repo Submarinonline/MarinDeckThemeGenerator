@@ -350,6 +350,49 @@
         </div>
       </div>
     </div>
+    <h2>CSS→JS変換(仮実装)</h2>
+    <div class="editor-input" style="height: auto;">
+      <h3>CSS</h3>
+      <input type="text" class="td-css-to-js" style="width: calc(100% - 15px);" placeholder="CSSを入力">
+      <h3>設定</h3>
+      <div class="grid editor-input-grid">
+        <div>
+          <span class="styletext">テーマID</span>
+          <div class="styleform">
+            <input type="text" class="md-theme-info2" data-prop="suffix" placeholder="半角英数字を推奨">
+          </div>
+        </div>
+        <div>
+          <span class="styletext">テーマ名</span>
+          <div class="styleform">
+            <input type="text" class="md-theme-info2" data-prop="name">
+          </div>
+        </div>
+        <div>
+          <span class="styletext">バージョン</span>
+          <div class="styleform">
+            <input type="text" class="md-theme-info2" data-prop="version" placeholder="半角英数字を推奨">
+          </div>
+        </div>
+        <div>
+          <span class="styletext">製作者</span>
+          <div class="styleform">
+            <input type="text" class="md-theme-info2" data-prop="author">
+          </div>
+        </div>
+      </div>
+      <div class="grid half">
+        <div>
+          <h3>JavaScript</h3>
+          <textarea class="td-js2" onfocus="this.select();"></textarea>
+        </div>
+        <div>
+          <h3>JavaScript(改行なし・テーマ提出用)</h3>
+          <textarea class="td-js2-min" onfocus="this.select();"></textarea>
+        </div>
+      </div>
+    </div>
+
   </div>
   <div class="point"></div>
 
